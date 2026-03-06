@@ -69,7 +69,7 @@ char **tokenize(char *line) {
     /*     printf("%p", tokp[pos]);
         printf("%s", token); */
 
-    if (pos > bufs) {
+    if (pos >= bufs) {
       bufs += TOK_SIZE;
       tokp = realloc(tokp, bufs * sizeof(char *));
       if (!tokp) {
@@ -124,7 +124,7 @@ int sh_help(char **args) {
   printf("ash aka aarnav shell [use at ur own risk] \n");
   printf("inbuilt functions include \n");
   for (i = 0; i < num_shc(); i++)
-    printf("%s", sh_str[i]);
+    printf("%s \n", sh_str[i]);
   return 1;
 }
 
