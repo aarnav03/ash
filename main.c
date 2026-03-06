@@ -9,7 +9,7 @@
 
 #define RL_BUFSIZE 1024
 #define TOK_SIZE 64
-#define TOK_DELI "\t\r\n\a"
+#define TOK_DELI " \t\r\n\a"
 
 int sh_cd(char **args);
 int sh_exit(char **args);
