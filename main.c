@@ -109,7 +109,7 @@ int launch(char **args) {
 
 int sh_cd(char **args) {
   if (args[1] == NULL)
-    fprintf(stderr, "ash: cd missing args");
+    fprintf(stderr, "ash: cd missing args \n");
   else {
     if (chdir(args[1]) != 0)
       perror("ash");
@@ -148,6 +148,7 @@ void loop(void) {
 
   do {
     printf("> ");
+    fflush(stdout);
     line = read_line();
     args = tokenize(line);
     status = execute(args);
@@ -157,7 +158,7 @@ void loop(void) {
   } while (status);
 }
 
-int main(int argc, char **argv) {
+int main() {
   /*   char *l = "hellooo does this stuff work??";
     tokenize(l); */
   loop();

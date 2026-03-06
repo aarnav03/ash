@@ -1,5 +1,6 @@
 
-scuffed shell
+a minimal unix shell
 
-name may or may not change (vsh???)
-
+ todo:
+    - piping
+    - globbing (wildcards n stuf)
